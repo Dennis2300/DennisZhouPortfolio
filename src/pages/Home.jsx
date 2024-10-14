@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
@@ -29,10 +30,15 @@ export default function Home() {
 
       {/* Navbar on home page */}
       <div className="navbar bg-base-100">
-        <div className="navbar-start"></div>
+        <div className="navbar-start">
+          {/* TODO: Whatever here logo or smth. */}
+        </div>
 
         <div className="navbar-center hidden lg:flex">
-            {/*}
+          {/* TODO: Button to link to pages */}
+          <Link to="gallery">
+            <button>Gallery</button>
+          </Link>
         </div>
         <div className="navbar-end">
           {/* TODO: login button with google account */}
