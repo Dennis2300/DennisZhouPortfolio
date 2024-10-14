@@ -1,5 +1,8 @@
+// import Dependencies
 import React from "react";
-import { Link } from "react-router-dom";
+
+// import Components
+import Navbar from "../components/Navbar";
 
 export default function Home() {
   return (
@@ -29,21 +32,9 @@ export default function Home() {
       </div>
 
       {/* Navbar on home page */}
-      <div className="navbar bg-base-100">
-        <div className="navbar-start">
-          {/* TODO: Whatever here logo or smth. */}
-        </div>
+      <Navbar />
 
-        <div className="navbar-center hidden lg:flex">
-          {/* TODO: Button to link to pages */}
-          <Link to="gallery">
-            <button>Gallery</button>
-          </Link>
-        </div>
-        <div className="navbar-end">
-          {/* TODO: login button with google account */}
-        </div>
-      </div>
+        {/* Main content on home page */}
     </div>
   );
 }
