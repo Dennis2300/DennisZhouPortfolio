@@ -8,12 +8,15 @@ import Footer from "../components/Footer";
 // import Assets
 import videoBg from "../assets/videos/videoBg.mp4";
 
+// import custom CSS
+import "../css/TypeAnimation.css";
+
 export default function Home() {
   return (
     <div>
       {/* Hero section on home page */}
-      <div id="homepage-hero-container">
-        <div className="hero min-h-screen">
+      <div id="homepage-hero-container" className="relative">
+        <div className="hero min-h-screen relative">
           <video
             autoPlay
             loop
@@ -22,14 +25,18 @@ export default function Home() {
           >
             <source src={videoBg} type="video/mp4" />
           </video>
-          <div className="hero-overlay bg-opacity-60"></div>
-          <div className="hero-content text-neutral-content text-center">
-            <div className="max-w-md">
-              <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-              <p className="mb-5">
-                Provident cupiditate voluptatem et in. Quaerat fugiat ut
-                assumenda excepturi exercitationem quasi. In deleniti eaque aut
-                repudiandae et a id nisi.
+
+          {/* Optional overlay to darken the video background */}
+          <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50 z-[-1]"></div>
+
+          {/* Hero content positioned at 2/3 of the viewport height */}
+          <div className="hero-content text-neutral-content text-center absolute left-1/2 transform -translate-x-1/2 top-[23vh]">
+            <div className="max-w-3xl">
+              <h1 className="mb-3 text-5xl font-heading text-white tracking-wide typing-animation">
+                Preserving Life's Artful Moments.
+              </h1>
+              <p className="mb-8 text-xl text-white font-heading tracking-wide">
+                Where every moment is turned into a lasting memory
               </p>
               <button className="btn btn-primary">Get Started</button>
             </div>
