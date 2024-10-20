@@ -31,11 +31,11 @@ export default function Home() {
 
           {/* Hero content positioned at 2/3 of the viewport height */}
           <div className="hero-content text-neutral-content text-center absolute left-1/2 transform -translate-x-1/2 top-[23vh]">
-            <div className="max-w-3xl">
+            <div className="max-w-5xl">
               <h1 className="mb-3 text-5xl font-heading text-white tracking-wide h-10">
-                <TypeWriter text="Preserving Life's Artful Moments" speed={100} />
+                <TypeWriter text="PRESERVING LIFE'S ARTFUL MOMENTS" speed={100} />
               </h1>
-              <p className="mb-8 text-xl text-white font-heading tracking-wide">
+              <p className="mb-5 mt-5 text-2xl text-white font-heading tracking-wide">
                 Where every moment is turned into a lasting memory
               </p>
               <button className="btn btn-primary">Get Started</button>
