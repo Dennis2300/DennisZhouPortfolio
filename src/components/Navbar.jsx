@@ -8,7 +8,7 @@ export default function Navbar() {
         {/* TODO: Whatever here logo or smth. */}
       </div>
 
-      <div className="navbar-center hidden lg:flex space-x-3">
+      <div className="navbar-center hidden lg:flex space-x-32 text-2xl m-3 font-navfont">
         {/* TODO: Button to link to pages */}
         <div id="link-to-gallery-container">
           <Link to="gallery">
@@ -26,6 +26,7 @@ export default function Navbar() {
           </Link>
         </div>
       </div>
+
       <div className="navbar-end">
         {/* TODO: login button with google account */}
       </div>
