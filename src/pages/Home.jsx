@@ -8,8 +8,8 @@ import Footer from "../components/Footer";
 // import Assets
 import videoBg from "../assets/videos/videoBg.mp4";
 
-// import custom CSS
-import "../css/TypeAnimation.css";
+// import Components
+import TypeWriter from "../components/TypeWriter";
 
 export default function Home() {
   return (
@@ -32,8 +32,8 @@ export default function Home() {
           {/* Hero content positioned at 2/3 of the viewport height */}
           <div className="hero-content text-neutral-content text-center absolute left-1/2 transform -translate-x-1/2 top-[23vh]">
             <div className="max-w-3xl">
-              <h1 className="mb-3 text-5xl font-heading text-white tracking-wide typing-animation">
-                Preserving Life's Artful Moments.
+              <h1 className="mb-3 text-5xl font-heading text-white tracking-wide h-10">
+                <TypeWriter text="Preserving Life's Artful Moments" speed={100} />
               </h1>
               <p className="mb-8 text-xl text-white font-heading tracking-wide">
                 Where every moment is turned into a lasting memory
