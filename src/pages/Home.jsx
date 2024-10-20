@@ -12,6 +12,10 @@ import videoBg from "../assets/videos/videoBg.mp4";
 // import Components
 import TypeWriter from "../components/TypeWriter";
 
+// import Styles
+import "../css/Button.css";
+import "../css/FadeAnimations.css";
+
 export default function Home() {
   return (
     <div>
@@ -39,10 +43,10 @@ export default function Home() {
                   speed={100}
                 />
               </h1>
-              <p className="mb-5 mt-5 text-xl text-white font-heading tracking-wider">
+              <p className="mb-5 mt-5 text-xl text-white font-heading tracking-wider fade-in-down">
                 WHERE EVERY MOMENT IS TURNED INTO A LASTING MEMORY
               </p>
-              <button className="btn btn-primary">Get Started</button>
+              <button className="button-30 text-xl font-content font-bold tracking-wide fade-in">THE GALLERY</button>
             </div>
           </div>
         </div>
