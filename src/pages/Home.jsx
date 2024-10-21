@@ -2,15 +2,14 @@
 import React from "react";
 
 // import Components
+import TypeWriter from "../components/TypeWriter";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ScrollIndicator from "../components/ScrollIndicator";
+import HeroImageGallery from "../components/HeroImageGallery";
 
 // import Assets
 import videoBg from "../assets/videos/videoBg.mp4";
-
-// import Components
-import TypeWriter from "../components/TypeWriter";
 
 // import Styles
 import "../css/Button.css";
@@ -61,9 +60,9 @@ export default function Home() {
       {/* Main content on home page */}
       <section
         id="section1"
-        className="h-screen bg-white flex items-center justify-center"
+        className="h-screen bg-dark flex items-center justify-center"
       >
-        <h1>This is section 1</h1>
+        <HeroImageGallery />
       </section>
 
       {/* Scroll indicator on home page */}
