@@ -1,10 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { ref, listAll, getDownloadURL } from "firebase/storage";
 import { storage } from "../firebaseConfig.js";
+import "../css/HeroImages.css";
 
 export default function HeroImageGallery() {
   const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(true);
+
+  const captions = [
+    "A beautiful sunset",
+    "A lovely couple",
+    "A serene landscape",
+  ];
 
   useEffect(() => {
     const fetchImages = async () => {
@@ -38,17 +45,15 @@ export default function HeroImageGallery() {
         ) : (
           <div style={{ display: "flex", justifyContent: "space-around" }}>
             {images.map((url, index) => (
-              <img
-                key={index}
-                src={url}
-                alt={`Featured work ${index}`}
-                style={{
-                  width: "300px",
-                  height: "200px",
-                  objectFit: "cover",
-                  margin: "10px",
-                }}
-              />
+              <div key={index} style={{ textAlign: "center", margin: "25px" }}>
+                <img
+                  key={index}
+                  src={url}
+                  alt={`Featured work ${index}`}
+                  className="hero-image"
+                />
+                <p className="text-white font-content">{captions[index]}</p>
+              </div>
             ))}
           </div>
         )}
