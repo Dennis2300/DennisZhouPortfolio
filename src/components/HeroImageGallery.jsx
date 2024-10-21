@@ -8,9 +8,9 @@ export default function HeroImageGallery() {
   const [loading, setLoading] = useState(true);
 
   const captions = [
-    "A beautiful sunset",
-    "A lovely couple",
+    "X marks the spot",
     "A serene landscape",
+    "Cozy cabin in the mountains",
   ];
 
   useEffect(() => {
