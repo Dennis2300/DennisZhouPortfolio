@@ -22,6 +22,7 @@ export default function Home() {
       {/* Hero section on home page */}
       <div id="homepage-hero-container" className="relative">
         <div className="hero min-h-screen relative">
+          {/* Video background */}
           <video
             autoPlay
             loop
@@ -36,8 +37,8 @@ export default function Home() {
 
           {/* Hero content positioned at 2/3 of the viewport height */}
           <div className="hero-content text-neutral-content text-center absolute left-1/2 transform -translate-x-1/2 top-[23vh]">
-            <div className="max-w-5xl">
-              <h1 className="mb-3 text-5xl font-heading text-white tracking-wide h-10">
+            <div className="max-w-7xl mx-auto">
+              <h1 className="whitespace-nowrap text-white text-7xl font-heading">
                 <TypeWriter
                   text="PRESERVING LIFE'S ARTFUL MOMENTS."
                   speed={100}
