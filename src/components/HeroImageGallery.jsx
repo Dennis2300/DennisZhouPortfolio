@@ -45,14 +45,17 @@ export default function HeroImageGallery() {
         ) : (
           <div style={{ display: "flex", justifyContent: "space-around" }}>
             {images.map((url, index) => (
-              <div key={index} style={{ textAlign: "center", margin: "25px" }}>
+              <div key={index} className="hero-image-container zoom-in">
                 <img
                   key={index}
                   src={url}
                   alt={`Featured work ${index}`}
                   className="hero-image"
                 />
-                <p className="text-white font-content">{captions[index]}</p>
+
+                <p className="text-black font-content z-10 mb-5">
+                  {captions[index]}
+                </p>
               </div>
             ))}
           </div>
