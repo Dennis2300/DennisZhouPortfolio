@@ -53,7 +53,7 @@ export default function HeroImageGallery() {
                   className="hero-image"
                 />
 
-                <p className="text-black font-content z-10 mb-5">
+                <p className="text-black font-content z-10 mb-7">
                   {captions[index]}
                 </p>
               </div>
