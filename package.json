@@ -1,5 +1,5 @@
 {
-  "homepage": "https://dennis2300.github.io/DennisZhouPortfolio",
+  "homepage": "https://Dennis2300.github.io/DennisZhouPortfolio",
   "name": "dennis_zhou_portfolio",
   "version": "0.1.0",
   "private": true,
@@ -21,7 +21,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "GITHUB_TOKEN=${GH_DEPLOY_TOKEN} gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
