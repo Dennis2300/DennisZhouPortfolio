@@ -1,6 +1,6 @@
 [
   {
-    "origin": ["https://dennis2300.github.io/DennisZhouPortfolio/"],
+    "origin": ["https://dennis2300.github.io/DennisZhouPortfolio/*"],
     "method": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     "responseHeader": ["Content-Type", "Authorization"],
     "maxAgeSeconds": 3600
