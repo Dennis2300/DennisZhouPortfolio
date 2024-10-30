@@ -3,7 +3,7 @@ name: Deploy React App to GitHub Pages
 on:
   push:
     branches:
-      - production # Change to 'master' or 'development' as needed
+      - production  # Only deploy when changes are pushed to the production branch
 
 jobs:
   build-deploy:
@@ -41,4 +41,4 @@ jobs:
       - name: Deploy to GitHub Pages
         run: npm run deploy
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Automatically provided by GitHub Actions
+          GITHUB_TOKEN: ${{ secrets.GH_DEPLOY_TOKEN }}  # Automatically provided by GitHub Actions
