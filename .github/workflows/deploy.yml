@@ -5,6 +5,9 @@ on:
     branches:
       - production
 
+permissions:
+  contents: write  # Allows the action to write to the repository
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
