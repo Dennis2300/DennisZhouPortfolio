@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Contact() {
   return (
@@ -7,13 +8,12 @@ export default function Contact() {
       <p className="text-2xl mt-3">
         This is my freetime project so I will be working on this in my sparetime
       </p>
-      <div id="home-button-container">
-        <a
-          href="/"
-          className="mt-6 inline-block text-lg font-bold py-3 px-8 bg-white text-black rounded hover:bg-black hover:text-white"
-        >
-          Go to Homepage
-        </a>
+      <div id="home-button-container" className="mt-5">
+        <Link to="/">
+          <button className="button-30 text-xl font-content font-bold tracking-wide">
+            Back to homepage
+          </button>
+        </Link>
       </div>
     </div>
   );

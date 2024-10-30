@@ -11,7 +11,7 @@ import NotFound from './pages/NotFound';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/DennisZhouPortfolio">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/gallery" element={<Gallery />} />

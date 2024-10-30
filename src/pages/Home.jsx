@@ -1,5 +1,6 @@
 // import Dependencies
 import React from "react";
+import { Link } from "react-router-dom";
 
 // import Components
 import TypeWriter from "../components/TypeWriter";
@@ -46,9 +47,11 @@ export default function Home() {
               <p className="mb-5 mt-5 text-xl text-white font-heading tracking-wider fade-in-down">
                 WHERE EVERY MOMENT IS TURNED INTO A LASTING MEMORY
               </p>
-              <button className="button-30 text-xl font-content font-bold tracking-wide fade-in">
-                THE GALLERY
-              </button>
+              <Link to="/gallery" >
+                <button className="button-30 text-xl font-content font-bold tracking-wide fade-in">
+                  THE GALLERY
+                </button>
+              </Link>
             </div>
           </div>
         </div>

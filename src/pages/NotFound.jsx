@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function NotFound() {
   return (
@@ -17,16 +18,17 @@ export default function NotFound() {
             }}
           ></div>
           <div className="">
-            <h3 className="text-3xl font-bold text-black">Looks like you got lost</h3>
+            <h3 className="text-3xl font-bold text-black">
+              Looks like you got lost
+            </h3>
             <p className="text-lg mt-3 text-black">
               The page you are looking for is not available!
             </p>
-            <a
-              href="/"
-              className="mt-6 inline-block text-lg font-bold py-3 px-8 bg-green-500 text-white rounded hover:bg-green-600"
-            >
-              Go to Homepage
-            </a>
+            <Link to="/">
+              <button className="button-30 text-xl font-content font-bold tracking-wide mt-5">
+                Back to homepage
+              </button>
+            </Link>
           </div>
         </div>
       </section>
