@@ -36,9 +36,12 @@ jobs:
           REACT_APP_FIREBASE_MEASUREMENT_ID: ${{ secrets.REACT_APP_FIREBASE_MEASUREMENT_ID }}
         run: |
           npm run build
-          echo "Firebase Storage Bucket: $REACT_APP_FIREBASE_STORAGE_BUCKET" 
-          echo "Firebase Storage Bucket: $REACT_APP_FIREBASE_PROJECT_ID" 
 
+      - name: Print Environment Variables
+        run: |
+            echo "FIREBASE_STORAGE_BUCKET: $REACT_APP_FIREBASE_STORAGE_BUCKET"
+            echo "FIREBASE_PROJECT_ID: $REACT_APP_FIREBASE_PROJECT_ID"
+        
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
