@@ -24,6 +24,7 @@ export default function Home() {
         <div className="hero min-h-screen relative">
           {/* Video background */}
           <video
+            preload="auto"
             autoPlay
             loop
             muted
