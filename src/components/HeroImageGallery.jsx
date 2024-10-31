@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { ref, listAll, getDownloadURL } from "firebase/storage";
-import { getStorage } from "../firebaseConfig.js";
+import { storage } from "../firebaseConfig.js";
 import "../css/HeroImages.css";
 
 export default function HeroImageGallery() {
@@ -15,7 +15,6 @@ export default function HeroImageGallery() {
 
   useEffect(() => {
     const fetchImages = async () => {
-      const storage = getStorage();
       const imagesRef = ref(storage, "images/");
 
       try {
