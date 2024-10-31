@@ -47,7 +47,7 @@ export default function Home() {
               <p className="mb-5 mt-5 text-xl text-white font-heading tracking-wider fade-in-down">
                 WHERE EVERY MOMENT IS TURNED INTO A LASTING MEMORY
               </p>
-              <Link to="/gallery" >
+              <Link to="/gallery">
                 <button className="button-30 text-xl font-content font-bold tracking-wide fade-in">
                   THE GALLERY
                 </button>
@@ -67,11 +67,13 @@ export default function Home() {
       >
         <h1 className="mb-10 text-7xl text-white">FEATURED WORK</h1>
         <HeroImageGallery />
-        <button className="button-30 mt-8">
-          <a href="/gallery" className="font-content text-black">
-            See more...
-          </a>
-        </button>
+        <Link to="/">
+          <button className="button-30 mt-8">
+            <a href="/gallery" className="font-content text-black">
+              See more...
+            </a>
+          </button>
+        </Link>
       </section>
 
       {/* Scroll indicator on home page */}
