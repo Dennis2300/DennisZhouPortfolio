@@ -14,7 +14,7 @@ export default function HeroImageGallery() {
   ];
 
   useEffect(() => {
-    const fetchImages = async () => {
+    async function fetchImages() {
       const imagesRef = ref(storage, "images/");
 
       try {
@@ -26,6 +26,7 @@ export default function HeroImageGallery() {
           firstThreeImages.map((imageRef) => getDownloadURL(imageRef))
         );
 
+        console.log("Image URLs:", urls); // Log the URLs after fetching
         setImages(urls);
         setLoading(false);
       } catch (error) {

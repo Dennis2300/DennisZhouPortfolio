@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "gallery-database-163bc"
-  }
+    "default": "gallery-database-163bc",
+    "myportfolio": "gallery-database-163bc"
+  },
+  "targets": {},
+  "etags": {}
 }
