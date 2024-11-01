@@ -68,11 +68,9 @@ export default function Home() {
       >
         <h1 className="mb-10 text-7xl text-white">FEATURED WORK</h1>
         <HeroImageGallery />
-        <Link to="/">
-          <button className="button-30 mt-8">
-            <a href="/gallery" className="font-content text-black">
+        <Link to="/gallery">
+          <button className="button-30 text-xl font-content font-bold tracking-wide mt-5">
               See more...
-            </a>
           </button>
         </Link>
       </section>
