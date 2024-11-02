@@ -1,20 +1,54 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { ref, listAll, getDownloadURL } from "firebase/storage";
 import { Link } from "react-router-dom";
+import { storage } from "../firebaseConfig.js";
 
 export default function Gallery() {
+  const [images, setImages] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    async function fetchImages() {
+      const imagesRef = ref(storage, "images/");
+
+      try {
+        const imagesList = await listAll(imagesRef);
+
+        const urls = await Promise.all(
+          imagesList.items.map((imageRef) => getDownloadURL(imageRef))
+        );
+        setImages(urls);
+        setLoading(false);
+      } catch (error) {
+        console.error("Error fetching images: ", error);
+        setLoading(false);
+      }
+    }
+
+    fetchImages();
+  });
   return (
-    <div className="text-center">
-      <h1 className="text-7xl">Page is under developement</h1>
-      <p className="text-2xl mt-3">
-        This is my freetime project so I will be working on this in my sparetime
-      </p>
-      <div id="home-button-container" className="mt-5">
-        <Link to="/">
-          <button className="button-30 text-xl font-content font-bold tracking-wide">
-            Back to homepage
-          </button>
-        </Link>
-      </div>
+    <div>
+      <section>
+        {loading ? (
+          <span className="loading loading-spinner loading-lg"></span>
+        ) : (
+          <div style={{ display: "flex", justifyContent: "space-around" }}>
+            {images.map((url, index) => (
+              <div key={index} className="hero-image-container zoom-in">
+                <Link to={`/images/${index}`}>
+                  <img
+                    key={index}
+                    src={url}
+                    alt={`Featured work ${index}`}
+                    className="hero-image"
+                  />
+                </Link>
+              </div>
+            ))}
+          </div>
+        )}
+      </section>
     </div>
-  );
+  )
 }

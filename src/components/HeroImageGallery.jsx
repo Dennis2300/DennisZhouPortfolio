@@ -25,8 +25,6 @@ export default function HeroImageGallery() {
         const urls = await Promise.all(
           firstThreeImages.map((imageRef) => getDownloadURL(imageRef))
         );
-
-        console.log("Image URLs:", urls); // Log the URLs after fetching
         setImages(urls);
         setLoading(false);
       } catch (error) {
