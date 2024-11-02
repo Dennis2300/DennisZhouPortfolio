@@ -35,15 +35,13 @@ export default function Gallery() {
         ) : (
           <div style={{ display: "flex", justifyContent: "space-around" }}>
             {images.map((url, index) => (
-              <div key={index} className="hero-image-container zoom-in">
-                <Link to={`/images/${index}`}>
+              <div key={index} >
                   <img
                     key={index}
                     src={url}
                     alt={`Featured work ${index}`}
-                    className="hero-image"
+                    
                   />
-                </Link>
               </div>
             ))}
           </div>
