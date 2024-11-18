@@ -3,6 +3,8 @@ import { ref, listAll, getDownloadURL } from "firebase/storage";
 import { Link } from "react-router-dom";
 import { storage } from "../firebaseConfig.js";
 
+import "../css/Gallery.css";
+
 export default function Gallery() {
   const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -28,25 +30,25 @@ export default function Gallery() {
     fetchImages();
   });
   return (
-    <div>
+    <div className="gallery-container">
       <section>
         {loading ? (
           <span className="loading loading-spinner loading-lg"></span>
         ) : (
-          <div style={{ display: "flex", justifyContent: "space-around" }}>
+          <div className="gallery">
             {images.map((url, index) => (
-              <div key={index} >
-                  <img
-                    key={index}
-                    src={url}
-                    alt={`Featured work ${index}`}
-                    
-                  />
+              <div key={index} className="gallery-item">
+                <img
+                  className="gallery-image"
+                  key={index}
+                  src={url}
+                  alt={`Featured work ${index}`}
+                />
               </div>
             ))}
           </div>
         )}
       </section>
     </div>
-  )
+  );
 }
