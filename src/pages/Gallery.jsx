@@ -37,12 +37,16 @@ export default function Gallery() {
         ) : (
           <div className="gallery">
             {images.map((url, index) => (
-              <div key={index} className="gallery-item">
+              <div
+                key={index}
+                className={`gallery-item ${
+                  index % 2 === 0 ? "horizontal" : "vertical"
+                }`}
+              >
                 <img
-                  className="gallery-image"
-                  key={index}
                   src={url}
                   alt={`Featured work ${index}`}
+                  className="gallery-image"
                 />
               </div>
             ))}
