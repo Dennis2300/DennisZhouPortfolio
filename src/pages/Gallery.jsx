@@ -9,6 +9,13 @@ export default function Gallery() {
   const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   useEffect(() => {
     async function fetchImages() {
       const imagesRef = ref(storage, "images/");
@@ -31,6 +38,17 @@ export default function Gallery() {
   });
   return (
     <div className="gallery-container">
+      <Link to="/">
+        <button className="fixed top-2 left-2 bg-blue-500 text-white px-4 py-2 rounded shadow hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400">
+          Home
+        </button>
+      </Link>
+      <button
+        onClick={scrollToTop}
+        className="fixed top-2 right-2 bg-blue-500 text-white px-4 py-2 rounded shadow hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
+      >
+        Scroll to Top
+      </button>
       <section>
         {loading ? (
           <span className="loading loading-spinner loading-lg"></span>
