@@ -16,6 +16,9 @@ import videoBg from "../assets/videos/videoBg.mp4";
 import "../css/Button.css";
 import "../css/FadeAnimations.css";
 
+console.log("Storage Bucket:", process.env.REACT_APP_FIREBASE_STORAGE_BUCKET);
+
+
 export default function Home() {
   return (
     <div>
